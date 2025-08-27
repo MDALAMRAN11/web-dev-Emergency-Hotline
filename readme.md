@@ -17,3 +17,10 @@ ans: first choose where to create or find the parent and create an element (ex: 
 ans: from target phase to root phase or parent phase like it's bubbling. first capturing phase second target phase and last is bubbling phase final parent the way it's going back after geting targeted element it's called event bubbling
 
 4.What is Event Delegation in JavaScript? Why is it useful?
+
+ans: event deligation is a shortcut and eficient method for addEventListener. if i have 100buttons insted of using 100event listener we can use only one event listener in parent and we can acces every button element with bubbling.
+
+5.What is the difference between preventDefault() and stopPropagation() methods?
+
+ans: these two things solve different problems, when we use form element, it's assume a normal button to submit button.thats why it's not not working properly then we use preventDefault() so that the default value should remove.
+stopPropagation is to stop bubbling event normally capturing an item or element from parent to child and bubbling child to parent. we can stop bubbling with stopPropagation.
