@@ -38,13 +38,13 @@
                 <div class="sm:mt-3 flex justify-around items-center">
                     <div class="ml-2">
                         <button class="btn rounded-full px-5 bg-[#EDFFF1]">
-                            <p class="pr-1">0</p>
+                            <p id="heart-icon" class="pr-1">0</p>
                             <img class="w-5" src="./assets/heart.png" alt="" />
                         </button>
                     </div>
                     <div class="ml-2">
                         <button class="btn rounded-full px-5 bg-[#EDFFF1]">
-                            <p class="pr-1">0</p>
+                            <p class="pr-1">100</p>
                             <img class="w-5" src="./assets/coin.png" alt="" />
                         </button>
                     </div>
@@ -79,7 +79,10 @@
         <main class="mx-auto my-10">
             <section class="mx-5 grid sm:grid-cols-1 md:grid-cols-12">
                 <section class="md:col-span-8">
-                    <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-6">
+                    <div
+                        id="all-cart-div"
+                        class="grid md:grid-cols-3 sm:grid-cols-1 gap-6"
+                    >
                         <div class="bg-white p-4 rounded-xl shadow-lg">
                             <div class="flex justify-between items-center">
                                 <img
