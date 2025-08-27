@@ -7,6 +7,31 @@ document.getElementById("all-cart-div").addEventListener("click", function (e) {
         console.log(newHeartIcon);
     }
 
+    //copy button functionality----------->>>>
+
+    if (
+        e.target.classList.contains("border-gray-400") &&
+        e.target.classList.contains("text-gray-400")
+    ) {
+        const allHelplineNumber =
+            e.target.parentNode.parentNode.children[1].querySelector(
+                "p"
+            ).innerText;
+        // console.log(
+        //     e.target.parentNode.parentNode.children[1].querySelector("p")
+        // );
+        navigator.clipboard.writeText(allHelplineNumber).then(() => {
+            alert("Number is copied : " + allHelplineNumber);
+        });
+        const headerCopyButton =
+            document.getElementById("header-copy-button").innerText;
+        const newHeaderCopyButton = parseInt(headerCopyButton) + 1;
+        document.getElementById("header-copy-button").innerText =
+            newHeaderCopyButton;
+    }
+
+    //console.log(e.target.classList);
+
     //call button, history and coins functionalaty---------->
 
     if (e.target.classList.contains("bg-green-500")) {
@@ -50,13 +75,13 @@ document.getElementById("all-cart-div").addEventListener("click", function (e) {
             assideHistorySection.appendChild(div);
         }
     }
-
-    //console.log(e.target);
-
-    // if (
-    //     e.target.classList.contains("my-2") &&
-    //     e.target.classList.contains("text-xs")
-    // ) {
-    //     console.log("you clicked on small title");
-    // }
 });
+
+document
+    .getElementById("clear-all-history")
+    .addEventListener("click", function () {
+        const assideHistorySection = document.getElementById(
+            "asside-history-section"
+        );
+        assideHistorySection.innerHTML = "";
+    });
